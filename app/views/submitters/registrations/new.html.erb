@@ -1,37 +1,46 @@
 <div class="section">
-  <div class="authform">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
-      <h3>Sign up</h3>
-      <%= devise_error_messages! %>
-      <div class="form-group">
-        <%= f.label :userid %>
-        <%= f.text_field :userid, class: 'form-control', value: Submitter.new_userid, readonly: "readonly" %>
+<div class="container form-page">
+  <div class="row">
+      <div class="col-md-6">
+        <h1>Contribute</h1>
+        <h4 class="intro-copy">Thanks you for contributing your data to Gunnr.<br><br>In the adjacent form, you'll see that you've been randomly assigned an 8 digit User ID. Write that ID down or email it to yourself -- it's the only way you'll be able to access your record in Gunnr if you need to make a change to your information.</h4>
       </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :medical_school %>
-        <%= f.text_field :medical_school, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :uw_overall_correct_pct %>
-        <%= f.text_field :uw_overall_correct_pct, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :uw_percentile %>
-        <%= f.text_field :uw_percentile, class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :step1_actual_score_3_digit %>
-        <%= f.text_field :step1_actual_score_3_digit, class: 'form-control' %>
-      </div>
-       <%= f.submit 'Sign up', :class => 'btn btn-success btn-block' %>
-    <% end %>
-  </div>
-</div>
+      <div class="col-md-6">
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
+          <h3>Sign up</h3>
+          <%= devise_error_messages! %>
+          <div class="form-group">
+            <%= f.label "Your unique user id (write it down!)" %>
+            <%= f.text_field :userid, class: 'form-control', value: Submitter.new_userid, readonly: "readonly" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :medical_school %>
+            <%= f.text_field :medical_school, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Usmle world overall percentage correct" %>
+            <%= f.text_field :uw_overall_correct_pct, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Usmle world percentile" %>
+            <%= f.text_field :uw_percentile, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label "Actual Step 1 score (3 digit)" %>
+            <%= f.text_field :step1_actual_score_3_digit, class: 'form-control' %>
+          </div>
+           <%= f.submit 'Sign up', :class => 'btn btn-success btn-block' %>
+        <% end %>
+      </div><!--/col-->
+  </div><!--/row-->
+  </div><!--/container-->
+</div><!--/section-->
+<br>

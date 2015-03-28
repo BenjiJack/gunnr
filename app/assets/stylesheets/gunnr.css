@@ -2,6 +2,10 @@
   padding-top: 90px;
 }
 
+.section .form-page {
+  padding-top: 30px;
+}
+
 header .intro-text .name {
   font-size: 4em;
 }

@@ -1,6 +1,14 @@
 <div class="section">
-	<div class="container">
+	<div class="container form-page">
+	<center><h1>Thanks for submitting your data to Gunnr!</h1>
 	<br>
+	<h5>If you didn't write it down earlier, here's your User ID (last chance):</h5>
 		<h1><%= @submitter.userid %></h1>
+	<br>
+	<% if submitter_signed_in? %>
+	<%= link_to 'Go back to the main page', destroy_submitter_session_path, :method=>'delete', class: "btn btn-large btn-primary" %>
+	<%= link_to 'Change my data', edit_submitter_registration_path, class: "btn btn-large btn-primary" %>
+	<% end %>
+	</center>
 	</div>
 </div>
