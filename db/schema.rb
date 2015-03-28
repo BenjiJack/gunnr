@@ -11,19 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328143609) do
+ActiveRecord::Schema.define(version: 20150328161216) do
 
   create_table "submitters", force: :cascade do |t|
-    t.string   "userid",              default: "", null: false
-    t.string   "encrypted_password",  default: "", null: false
+    t.string   "userid",                     default: "", null: false
+    t.string   "encrypted_password",         default: "", null: false
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",       default: 0,  null: false
+    t.integer  "sign_in_count",              default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "medical_school"
+    t.integer  "uw_overall_correct_pct"
+    t.integer  "uw_percentile"
+    t.integer  "step1_actual_score_3_digit"
   end
 
   add_index "submitters", ["userid"], name: "index_submitters_on_userid", unique: true
@@ -45,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150328143609) do
     t.string   "step1date"
     t.string   "step2ckdate"
     t.string   "step3date"
+    t.string   "medical_school"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
