@@ -1,5 +1,5 @@
 class SubmittersController < ApplicationController
-  #before_filter :authenticate_user!
+  before_filter :authenticate_submitter!
 
   def index
     @submitters = Submitter.all
