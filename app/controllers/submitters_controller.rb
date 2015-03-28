@@ -2,7 +2,8 @@ class SubmittersController < ApplicationController
   before_filter :authenticate_submitter!
 
   def index
-    @submitters = Submitter.all
+    redirect_to :back, :alert => "Access denied."
+    #@submitters = Submitter.all
   end
 
   def show
