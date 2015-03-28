@@ -11,6 +11,10 @@ class Submitter < ActiveRecord::Base
   validates_presence_of :userid, :on=>:create
   validates_format_of :userid, :with => /\A([0-9a-f]{8})\Z/i, :on => :create #matches 8 digit hex
 
+  validates_format_of :uw_overall_correct_pct, :with => /\A([0-9]{1,2})\Z/i, :on => :create
+  validates_format_of :uw_percentile, :with => /\A([0-9]{1,2})\Z/i, :on => :create
+  validates_format_of :step1_actual_score_3_digit, :with => /\A([0-9]{2,3})\Z/i, :on => :create
+
   def self.new_userid
 
   	@id = SecureRandom.hex(4)
