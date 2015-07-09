@@ -20,7 +20,7 @@
                     <div class="col-lg-4">
                     </div>
                     <div class="col-lg-8">
-                    <h3>Hey kids. This here's pretty simple. <br>Gunnr anonymously collects academic data from medical students, and aggregates it for public consumption. Yum.</h3>
+                    <h3>Gunnr anonymously collects academic data from medical students, and aggregates it for public consumption. Yum.</h3>
                     </div>
                 </div><!--/row-->
             </div><!--/container-->
@@ -30,11 +30,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                     <h3 class="intro-copy">Remember when you were studying for Step 1 and trying to predict your score? How about when you were creating your RoL and trying to calculate your odds of matching into Derm at MGH? Good times.</h3> 
+                     <h3 class="intro-copy">Remember when you were studying for Step 1 and trying to predict your score?</h3> 
 
                      <h3 class="intro-copy">Gunnr is designed to give the next generation of medical students real, actual <i>information</i> to make <i>informed decisions</i>, replacing the fuel of pure speculation of years past. It's time for a taste of some of that evidence based medicine.</h3>
-
-                     <h3 class="intro-copy">This is all pretty new, so we're going to start low and go slow. Step one: Step 1.</h3>
                     </div>
                     <div class="col-lg-4">
                     </div>
@@ -47,12 +45,12 @@
                 <div class="row">
                     <div class="col-lg-4">
                     <br>
-                    <%= link_to 'Share data', '#', class: "btn btn-lg btn-primary btn-block" %>
+                    <%= link_to 'Share data', new_submitter_registration_path, class: "btn btn-lg btn-primary btn-block" %>
                     <br><br><br><br><br>
-                    <%= link_to 'Get data', '#', class: "btn btn-lg btn-primary btn-block" %>
+                    <%= link_to 'Get data', new_user_session_path, class: "btn btn-lg btn-primary btn-block" %>
                     </div>
                     <div class="col-lg-8">
-                    <h3 class="intro-copy">If you've <strong>taken</strong> USMLE Step 1, share the wealth. Submit your USMLE World scores and your final Step 1 score, so those gearing up to take the exam know where they stand while they prepare. It's completely anonymous (see below).</h3>
+                    <h3 class="intro-copy">If you've <strong>taken</strong> USMLE Step 1, share the wealth. Submit your USMLE World scores and your final Step 1 score, so those gearing up to take the exam know where they stand while they prepare. It's completely <a href="#privacy">anonymous.</a></h3>
 
                     <h3 class="intro-copy">If you're <strong>preparing</strong> for USMLE Step 1, sign up for a beta account to see how others fared on the exam based on their USMLE World scores.</h3>
                     </div>
@@ -60,7 +58,7 @@
             </div><!--/container-->
         </section><!--/section-->
 
-        <section class="success">
+        <section class="success" id="privacy">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
