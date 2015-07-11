@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   resources :users
   resources :submitters
+
+  get '/about' => 'visitors#about'
+  
 end

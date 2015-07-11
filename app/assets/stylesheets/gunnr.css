@@ -19,6 +19,9 @@ header .intro-text .name {
   font-weight: 400;
 }
 
+#about-container {
+  padding-top: 180px;
+}
 
 // Styles for form views
 .form {
