@@ -45,15 +45,17 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                    <br>
-                    <%= link_to 'Share data', new_submitter_registration_path, class: "btn btn-lg btn-primary btn-block" %>
-                    <br><br><br><br><br>
-                    <%= link_to 'Get data', new_user_session_path, class: "btn btn-lg btn-primary btn-block" %>
-                    </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
+                    <%= link_to new_submitter_registration_path, class: "btn btn-lg btn-warning btn-block" do %>
+                        <%= image_tag('icon_bulb.png') %> <h1>Share data</h1>
+                    <% end %>
                     <h3 class="intro-copy">If you've <strong>taken</strong> USMLE Step 1, share the wealth. Submit your USMLE World scores and your final Step 1 score, so those gearing up to take the exam know where they stand while they prepare. It's completely <a href="#privacy">anonymous.</a></h3>
+                    </div>
 
+                    <div class="col-lg-6">
+                    <%= link_to new_user_session_path, class: "btn btn-lg btn-danger btn-block" do %>
+                        <%= image_tag('icon_screen.png') %> <h1>Get data</h1>
+                    <% end %>
                     <h3 class="intro-copy">If you're <strong>preparing</strong> for USMLE Step 1, sign up for a beta account to see how others fared on the exam based on their USMLE World scores.</h3>
                     </div>
                 </div><!--/row-->
